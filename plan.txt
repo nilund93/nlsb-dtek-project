@@ -1,0 +1,8 @@
+Det här är planen:
+- Initiera PORT A så vi kan läsa från A0-porten där vi får värdet från fuktsensorn.
+- Ta värdet från PORT A och gör som i sofie.c
+- ???
+- PROFIT!
+
+
+Vi använder oss av det analoga värdet för det är mer kodande (men lättare att förstå).

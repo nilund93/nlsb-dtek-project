@@ -2,10 +2,13 @@
 	Sofies kodrader på papper
 */
 
-int flowerstatus = AnalogInput(A0);
+int flowerstatus = AnalogInput(A0); //DigitalInput?
 int time = 0;
 int kind = 0;
-
+display_init();
+display_string(0, "Flowerstatus: ");
+display_string(1, "in Computer");
+display_update();
 if (flowerstatus > 350){
 	sendMessage(kind);
 	if (time==0){
@@ -18,15 +21,18 @@ if (flowerstatus > 350){
 	}
 }
 else{
-	printf("Flower is a happy flower.\n");
+	display_string(1, "I am happy.");
+	//printf("Flower is a happy flower.\n");
 	time = 0;
 }
 void sendMessage(int kind){
 	if (kind >= 0 && kind < 5){//Nice message
-		printf("I am watered, but I'd like some water soon\n");
+		display_string(1, "I am wet, but will soon be dry.");
+		//printf("I am watered, but I'd like some water soon\n");
 	}
 
 	if (kind < 0 && kind >> -5{ //Angry message
-		printf("Water me, you monster.\n");
+		display_string(1, "Water me, you monster.");
+		//printf("Water me, you monster.\n");
 	}  
 }
